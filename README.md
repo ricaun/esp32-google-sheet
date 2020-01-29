@@ -33,6 +33,8 @@ After make a copy open the script editor.
 
 ## Google Stript
 
+Copy the content of the [code.gs][3] file to your google script file.
+
 You need to publish the script and deploy as web app.
 
 <img src="image/deploy-as-web-app.png" width="50%">
@@ -71,3 +73,4 @@ Paste the `Current web app URL` on the `GOOGLE_URL` define on the esp32-google-s
 
 [1]: https://docs.google.com/spreadsheets/
 [2]: https://docs.google.com/spreadsheets/d/11VS5QQhGR095CX6Sf-s5ar5jaTDVsAoa5uFUXeVMZts/edit?usp=sharing
+[3]: google-script/code.gs
