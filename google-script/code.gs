@@ -35,6 +35,10 @@ function doGet(e){
 // ------------------------------------------------------------- //
 // ------------------------------------------------------------- //
 // ------------------------------------------------------------- //
+// Format
+// ; => new line
+// | => next value
+// ------------------------------------------------------------- //
 
 function addLine(content)
 {
@@ -46,8 +50,21 @@ function addLine(content)
   
   for(var i = 0; i< size; i++)
   {
-    var valor = str2float(array[i]);
-    addArrayBefore([getTimeSecond(time, 1+i-size), mac, valor]);  
+    var valores = array[i].split("|");
+
+    var values = [];
+    var timeValue = getTimeSecond(time, 1+i-size);
+    
+    values.push(timeValue);
+    values.push(mac);
+
+    for (var j = 0; j < valores.length; j++)
+    {
+      var valor = str2float(valores[j]);
+      values.push(valor);
+    }
+
+    addArrayBefore(values);  
   }
 }
 
