@@ -4,6 +4,7 @@ This project is an example of how to create and add data on a [Google Spreadshee
 
 The program read the analog 0 add value on a buffer and sends every 30 seconds to the [Google Spreadsheet][1].
 
+[![Build Status](https://travis-ci.org/ricaun/esp32-google-sheet.svg?branch=master)](https://travis-ci.org/ricaun/esp32-google-sheet)
 
 ## Wifi
 
