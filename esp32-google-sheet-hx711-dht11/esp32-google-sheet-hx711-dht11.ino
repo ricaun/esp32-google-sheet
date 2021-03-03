@@ -152,12 +152,16 @@ static String _body = "";
 
 String add_body()
 {
-  _body += ";";
-  _body += readAnalogPin();
-  _body += "|";
-  _body += hx711_read();
-  _body += "|";
-  _body += dht11_read_temperature();
+  String body = "";
+  body += ";";
+  body += readAnalogPin();
+  body += "|";
+  body += hx711_read();
+  body += "|";
+  body += dht11_read_temperature();
+  body += "|";
+  body += dht_read_humidity();
+  _body += body;
 }
 
 String get_body()

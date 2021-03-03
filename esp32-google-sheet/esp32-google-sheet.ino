@@ -150,16 +150,18 @@ static String _body = "";
 
 String add_body()
 {
-  _body += ";";
-  _body += readAnalogPin();
+  String body = "";
+  body += ";";
+  body += readAnalogPin();
+  _body += body;
 }
 
 String get_body()
 {
   String payload = _body;
+  _body = "";
   String mac = WiFi.macAddress();
-  _body = mac;
-  return payload;
+  return mac+payload;
 }
 
 // ----------------- google ------------------- //

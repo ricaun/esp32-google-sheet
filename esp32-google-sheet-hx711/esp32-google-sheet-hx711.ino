@@ -151,18 +151,20 @@ static String _body = "";
 
 String add_body()
 {
-  _body += ";";
-  _body += readAnalogPin();
-  _body += "|";
-  _body += hx711_read();
+  String body = "";
+  body += ";";
+  body += readAnalogPin();
+  body += "|";
+  body += hx711_read();
+  _body += body;
 }
 
 String get_body()
 {
   String payload = _body;
+  _body = "";
   String mac = WiFi.macAddress();
-  _body = mac;
-  return payload;
+  return mac+payload;
 }
 
 // ----------------- google ------------------- //
