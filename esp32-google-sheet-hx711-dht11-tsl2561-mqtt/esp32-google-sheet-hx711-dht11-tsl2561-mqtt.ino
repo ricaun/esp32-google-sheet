@@ -123,6 +123,7 @@ void loop(void)
   {
     add_body();
   }
+  mqtt_loop();
   server.handleClient();
 }
 
