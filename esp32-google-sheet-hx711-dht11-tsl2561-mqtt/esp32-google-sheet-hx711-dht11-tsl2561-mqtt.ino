@@ -84,6 +84,8 @@ void setup(void)
     Serial.print(".");
   }
 
+  mqtt_setup();
+
   Serial.println("");
   Serial.print("Connected to ");
   Serial.println(ssid);

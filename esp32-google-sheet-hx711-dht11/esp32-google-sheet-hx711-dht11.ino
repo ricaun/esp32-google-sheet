@@ -158,7 +158,7 @@ String add_body()
   body += "|";
   body += hx711_read();
   body += "|";
-  body += dht11_read_temperature();
+  body += dht_read_temperature();
   body += "|";
   body += dht_read_humidity();
   _body += body;
