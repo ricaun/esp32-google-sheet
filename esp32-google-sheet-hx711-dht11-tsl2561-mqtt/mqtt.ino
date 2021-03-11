@@ -48,7 +48,7 @@ void mqtt_publish(String topic, float number)
         return;
     char buffer[16] = {0};
     sprintf(buffer, "%.2f", number);
-    client.publish(topic.c_str(), buffer);
+    MQTT.publish(topic.c_str(), buffer);
 }
 
 void mqtt_callback(char *topic, byte *payload, unsigned int length)
